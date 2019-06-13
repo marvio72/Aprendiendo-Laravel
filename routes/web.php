@@ -75,3 +75,6 @@ Route::get('/listadopelis', function () {
         ->with('listado',$listado);
 });
 
+Route::get('/pagina-generica', function () {
+    return view('pagina');
+});

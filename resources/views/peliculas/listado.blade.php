@@ -1,3 +1,4 @@
+@include('includes.header')
 <h1>{{$titulo}}</h1>
 <h2>{{$listado[1]}}</h2>
 <p>{{date('d-m-Y')}}</p>
@@ -35,6 +36,9 @@
     <?php $contador++; ?>
 @endwhile
 
+<hr>
 @foreach ($listado as $pelicula)
     <p>{{$pelicula}}</p>
 @endforeach
+
+@include('includes.footer')
