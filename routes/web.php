@@ -30,3 +30,9 @@ Route::get('/mostrar-fecha', function () {
         'fecha' => $fecha
     ));
 });
+// Para que el parametro no sea obligado se agrega un simbolo ?
+Route::get('/pelicula/{titulo?}', function ($titulo = 'No hay una pelicula seleccionada') {
+    return view('pelicula', array(
+        'titulo' => $titulo
+    ));
+});
