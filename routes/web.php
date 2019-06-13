@@ -58,4 +58,20 @@ Route::get('/pelicula/{titulo}/{year?}', function ($titulo = 'No hay una pelicul
     'year'   => '[0-9]+'
 ));
 
+//CON ARRAY
+Route::get('/listado-peliculas', function () {
+    $titulo = 'Listado de peliculas con array';
+    return view('peliculas.listado', array(
+        'titulo' => $titulo
+    ));
+});
+
+//CON WITH
+Route::get('/listadopelis', function () {
+    $titulo = 'Listado de Peliculas con with';
+    $listado = array('Batman','Spiderman','El profeta increible');
+    return view('peliculas.listado')
+        ->with('titulo',$titulo)
+        ->with('listado',$listado);
+});
 
