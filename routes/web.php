@@ -25,6 +25,8 @@ Route::get('/detalle', [
 
 Route::resource('usuario', 'UsuarioController');
 
+Route::get('/redirigir', 'PeliculaController@redirigir' );
+
 // GET   : Conseguir datos
 // POST  : Guardar datos
 // PUT   : Actualizar recursos
